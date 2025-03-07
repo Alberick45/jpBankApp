@@ -92,18 +92,11 @@ WSGI_APPLICATION = 'jpbankapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME':  'jpbank086',
-        'HOST': 'MBAPPE',
-        'PORT': '1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-            'trusted_connection': 'yes',
-            'extra_params': 'MARS_Connection=yes;',
-        }
-
+        'ENGINE': 'django.db.backends.sqlite3',  # Use SQLite backend
+        'NAME': BASE_DIR / "db.sqlite3",  # Path to SQLite database file
     }
 }
+
 
 
 # Password validation
